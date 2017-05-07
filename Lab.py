@@ -1,19 +1,19 @@
 import pandas as pd
 import numpy as np
 import matplotlib.pyplot as plt
-# sample = pd.read_csv("datasets/sample_submission.csv")
-# #test_images = (pd.read_csv("datasets/test.csv").values).astype('float32')
-# test_pixel = (pd.read_csv("datasets/test.csv").ix[:,:].values).astype('float32')
-# print(test_pixel.shape)
-# test_image = test_pixel.reshape(test_pixel.shape[0], 28, 28)
-# #print(test_image)
+sample = pd.read_csv("datasets/sample_submission.csv")
+#test_images = (pd.read_csv("datasets/test.csv").values).astype('float32')
+test_pixel = (pd.read_csv("datasets/train.csv").ix[:,1:].values).astype('float32')
+print(test_pixel.shape)
+test_image = test_pixel.reshape(test_pixel.shape[0], 28, 28)
+#print(test_image)
 
-# print (range(0,3))
-# for i in range(0, 100):
-#     plt.subplot(10,10,i+1)
-#     plt.imshow(test_image[i], cmap=plt.get_cmap('gray'))
-#     plt.title('a')
-# plt.show()
+print (range(0,3))
+for i in range(32000, 32001):
+    plt.subplot(1,1,1)
+    plt.imshow(test_image[i], cmap=plt.get_cmap('gray'))
+    plt.title('a')
+plt.show()
 
 train_label = (pd.read_csv("datasets/train.csv").ix[:,0].values).astype('int32')
 # print(train_label)
@@ -27,9 +27,24 @@ train_label = (pd.read_csv("datasets/train.csv").ix[:,0].values).astype('int32')
 
 def OneHotEncoding(labels, encode_space):
     num_of_labels = labels.shape[0]
-    blank = np.zeros((num_of_labels, encode_space), dtype=np.int)
+    encoded_labels = np.zeros((num_of_labels, encode_space), dtype=np.int)
     for i in range(0, num_of_labels):
-        blank[i][labels[i]] = 1
-    return blank
+        encoded_labels[i][labels[i]] = 1
+    return encoded_labels
 
-print(OneHotEncoding(train_label, 10))
+# encoded = OneHotEncoding(train_label, 10)
+# print(encoded)
+# plt.plot(encoded[0])
+# plt.xticks(range(1, 12))
+# plt.show()
+
+np.zeros()
+
+
+
+# #tomorrow :
+# 1 layer network
+# multi layer network
+# add fectures
+# find paper
+
