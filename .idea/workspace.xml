@@ -5,9 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="8c15b717-b861-4ad3-a683-063991c2a911" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/csfnn.ipynb" afterPath="$PROJECT_DIR$/csfnn.ipynb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ffnn_1lr.py" afterPath="$PROJECT_DIR$/ffnn_1lr.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/毕设.docx" afterPath="$PROJECT_DIR$/毕设.docx" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -20,6 +18,9 @@
     <option name="PATCH_PATH" value="" />
   </component>
   <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
+  <component name="FavoritesManager">
+    <favorites_list name="kaggle.Digit_Recognizer" />
+  </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file leaf-file-name="dataProcessing.py" pinned="false" current-in-tab="false">
@@ -83,12 +84,13 @@
       <file leaf-file-name="ffnn_1lr.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/ffnn_1lr.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-1118">
-              <caret line="362" column="26" lean-forward="false" selection-start-line="362" selection-start-column="26" selection-end-line="362" selection-end-column="26" />
+            <state relative-caret-position="52">
+              <caret line="281" column="23" lean-forward="true" selection-start-line="281" selection-start-column="23" selection-end-line="306" selection-end-column="0" />
               <folding>
                 <element signature="e#10#29#0" expanded="true" />
                 <element signature="e#1259#4255#0" expanded="false" />
                 <element signature="e#4465#8215#0" expanded="false" />
+                <marker date="1495379719000" expanded="true" signature="12587:12734" ph="..." />
               </folding>
             </state>
           </provider>
@@ -133,7 +135,8 @@
     </option>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="y" value="23" />
+    <option name="x" value="369" />
+    <option name="y" value="69" />
     <option name="width" value="1440" />
     <option name="height" value="873" />
   </component>
@@ -185,7 +188,7 @@
     </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="settings.editor.selected.configurable" value="preferences.keymap" />
+    <property name="settings.editor.selected.configurable" value="preferences.lookFeel" />
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
@@ -388,13 +391,23 @@
     </task>
     <servers />
   </component>
+  <component name="TodoView">
+    <todo-panel id="selected-file">
+      <is-autoscroll-to-source value="true" />
+    </todo-panel>
+    <todo-panel id="all">
+      <are-packages-shown value="true" />
+      <is-autoscroll-to-source value="true" />
+    </todo-panel>
+  </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="23" width="1440" height="873" extended-state="1" />
+    <frame x="369" y="69" width="1440" height="873" extended-state="1" />
     <editor active="true" />
     <layout>
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.13530655" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.38930348" sideWeight="0.5024665" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.06506024" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3162612" sideWeight="0.49753347" order="2" side_tool="false" content_ui="tabs" />
@@ -407,7 +420,6 @@
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
@@ -468,6 +480,7 @@
             <element signature="e#10#29#0" expanded="true" />
             <element signature="e#1259#4255#0" expanded="false" />
             <element signature="e#4465#8215#0" expanded="false" />
+            <marker date="1495379719000" expanded="true" signature="12587:12734" ph="..." />
           </folding>
         </state>
       </provider>
@@ -527,6 +540,7 @@
             <element signature="e#10#29#0" expanded="true" />
             <element signature="e#1259#4255#0" expanded="false" />
             <element signature="e#4465#8215#0" expanded="false" />
+            <marker date="1495379719000" expanded="true" signature="12587:12734" ph="..." />
           </folding>
         </state>
       </provider>
@@ -579,6 +593,7 @@
             <element signature="e#10#29#0" expanded="true" />
             <element signature="e#1259#4255#0" expanded="false" />
             <element signature="e#4465#8215#0" expanded="false" />
+            <marker date="1495379719000" expanded="true" signature="12587:12734" ph="..." />
           </folding>
         </state>
       </provider>
@@ -631,6 +646,7 @@
             <element signature="e#10#29#0" expanded="true" />
             <element signature="e#1259#4255#0" expanded="false" />
             <element signature="e#4465#8215#0" expanded="false" />
+            <marker date="1495379719000" expanded="true" signature="12587:12734" ph="..." />
           </folding>
         </state>
       </provider>
@@ -676,6 +692,7 @@
             <element signature="e#10#29#0" expanded="true" />
             <element signature="e#1259#4255#0" expanded="false" />
             <element signature="e#4465#8215#0" expanded="false" />
+            <marker date="1495379719000" expanded="true" signature="12587:12734" ph="..." />
           </folding>
         </state>
       </provider>
@@ -799,12 +816,13 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/ffnn_1lr.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1118">
-          <caret line="362" column="26" lean-forward="false" selection-start-line="362" selection-start-column="26" selection-end-line="362" selection-end-column="26" />
+        <state relative-caret-position="52">
+          <caret line="281" column="23" lean-forward="true" selection-start-line="281" selection-start-column="23" selection-end-line="306" selection-end-column="0" />
           <folding>
             <element signature="e#10#29#0" expanded="true" />
             <element signature="e#1259#4255#0" expanded="false" />
             <element signature="e#4465#8215#0" expanded="false" />
+            <marker date="1495379719000" expanded="true" signature="12587:12734" ph="..." />
           </folding>
         </state>
       </provider>
