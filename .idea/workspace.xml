@@ -5,11 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="8c15b717-b861-4ad3-a683-063991c2a911" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/codeformat.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/~$毕设.docx" afterPath="$PROJECT_DIR$/~$毕设.docx" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/毕设.docx" afterPath="$PROJECT_DIR$/毕设.docx" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ffnn_1lr.ipynb" afterPath="$PROJECT_DIR$/ffnn_1lr.ipynb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/~$ (Autosaved) .docx" afterPath="$PROJECT_DIR$/~$ (Autosaved) .docx" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/毕设 (Autosaved) .docx" afterPath="$PROJECT_DIR$/毕设 (Autosaved) .docx" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -103,8 +100,8 @@
       <file leaf-file-name="codeformat.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/codeformat.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="406">
-              <caret line="303" column="33" lean-forward="true" selection-start-line="0" selection-start-column="0" selection-end-line="461" selection-end-column="0" />
+            <state relative-caret-position="318">
+              <caret line="392" column="89" lean-forward="true" selection-start-line="392" selection-start-column="89" selection-end-line="392" selection-end-column="89" />
               <folding>
                 <element signature="e#10#29#0" expanded="true" />
                 <element signature="e#1173#4190#0" expanded="false" />
@@ -155,7 +152,8 @@
     </option>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="y" value="23" />
+    <option name="x" value="-29" />
+    <option name="y" value="750" />
     <option name="width" value="1440" />
     <option name="height" value="873" />
   </component>
@@ -420,7 +418,7 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="23" width="1440" height="873" extended-state="1" />
+    <frame x="-29" y="750" width="1440" height="873" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.13389711" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
@@ -841,8 +839,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/codeformat.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="406">
-          <caret line="303" column="33" lean-forward="true" selection-start-line="0" selection-start-column="0" selection-end-line="461" selection-end-column="0" />
+        <state relative-caret-position="318">
+          <caret line="392" column="89" lean-forward="true" selection-start-line="392" selection-start-column="89" selection-end-line="392" selection-end-column="89" />
           <folding>
             <element signature="e#10#29#0" expanded="true" />
             <element signature="e#1173#4190#0" expanded="false" />
