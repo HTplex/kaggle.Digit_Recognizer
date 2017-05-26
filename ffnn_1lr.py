@@ -425,17 +425,28 @@ def conv_sample_ffbias_training(conv_core,num_of_fmap,num_of_hidden_unit,
     return Numbers, benchmark, end_time - start_time
 
 #batch
-(num1, bench1, time1) = one_layer_training_with_bias(10, 1, 0.01, 1000, 123123, 100, train_data, train_label, test_data, test_label, 0.01,"1 batch")
-(num2, bench2, time2) = one_layer_training_with_bias(10, 5, 0.01, 1000, 123123, 100, train_data, train_label, test_data, test_label, 0.01,"5 batch")
-(num3, bench3, time3) = one_layer_training_with_bias(10, 20, 0.01, 1000, 123123, 100, train_data, train_label, test_data, test_label, 0.01,"20 batch")
-(num4, bench4, time4) = one_layer_training_with_bias(10, 100, 0.01, 1000, 123123, 100, train_data, train_label, test_data, test_label, 0.01,"100 batch")
-(num5, bench5, time5) = one_layer_training_with_bias(10, 1000, 0.01, 1000, 123123, 100, train_data, train_label, test_data, test_label, 0.01,"1000 batch")
-np.savetxt("1batch.csv",bench1,delimiter=',')
-np.savetxt("5batch.csv",bench2,delimiter=',')
-np.savetxt("20batch.csv",bench3,delimiter=',')
-np.savetxt("100batch.csv",bench4,delimiter=',')
-np.savetxt("1000batch.csv",bench5,delimiter=',')
-print (time1 + " " +time2+ " " +time3+ " " +time4+ " " +time5)
+# (num1, bench1, time1) = one_layer_training_with_bias(5, 1, 0.01, 1000, 123123, 100, train_data, train_label, test_data, test_label, 0.01,"1 batch")
+# (num2, bench2, time2) = one_layer_training_with_bias(5, 5, 0.01, 1000, 123123, 100, train_data, train_label, test_data, test_label, 0.01,"5 batch")
+# (num3, bench3, time3) = one_layer_training_with_bias(5, 20, 0.01, 1000, 123123, 100, train_data, train_label, test_data, test_label, 0.01,"20 batch")
+# (num4, bench4, time4) = one_layer_training_with_bias(5, 100, 0.01, 1000, 123123, 100, train_data, train_label, test_data, test_label, 0.01,"100 batch")
+# (num5, bench5, time5) = one_layer_training_with_bias(5, 1000, 0.01, 1000, 123123, 100, train_data, train_label, test_data, test_label, 0.01,"1000 batch")
+# np.savetxt("1batch.csv",bench1,delimiter=',')
+# np.savetxt("5batch.csv",bench2,delimiter=',')
+# np.savetxt("20batch.csv",bench3,delimiter=',')
+# np.savetxt("100batch.csv",bench4,delimiter=',')
+# np.savetxt("1000batch.csv",bench5,delimiter=',')
+# print (str(time1) + " " +str(time2)+ " " +str(time3)+ " " +str(time4)+ " " +str(time5))
+
+#131.53803420066833 97.59222078323364 26.850767135620117 20.91114616394043 11.101556062698364
+
+#epoch
+(num1, bench1, time1) = one_layer_training_with_bias(10, 200, 0.005, 1000, 123123, 100, train_data, train_label, test_data, test_label, 0.01,"200 batch")
+(num2, bench2, time2) = one_layer_training_with_bias(10, 10, 0.01, 1000, 123123, 100, train_data, train_label, test_data, test_label, 0.01,"10 batch")
+(num3, bench3, time3) = one_layer_training_with_bias(10, 1, 0.01, 1000, 123123, 100, train_data, train_label, test_data, test_label, 0.01,"1 batch")
+
+np.savetxt("200batch10ep.csv",bench1,delimiter=',')
+np.savetxt("10batch10ep.csv",bench2,delimiter=',')
+np.savetxt("1batch10ep.csv",bench3,delimiter=',')
 
 
 
