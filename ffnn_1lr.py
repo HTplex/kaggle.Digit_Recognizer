@@ -168,8 +168,8 @@ def one_layer_training_with_bias(epoch, batch_size, alpha, CE_freq, random_seed,
             d_in_to_hid = np.dot(train_batch.transpose(), d_hid)
 
             # update weights
-            del_hid_to_out = -1 * alpha * d_hid_to_out / batch_size
-            del_in_to_hid = -1 * alpha * d_in_to_hid / batch_size
+            del_hid_to_out = -1 * alpha * d_hid_to_out #/ batch_size
+            del_in_to_hid = -1 * alpha * d_in_to_hid #/ batch_size
             hid_to_out_weights += del_hid_to_out
             in_to_hid_weights += del_in_to_hid
 
@@ -424,6 +424,18 @@ def conv_sample_ffbias_training(conv_core,num_of_fmap,num_of_hidden_unit,
 
     return Numbers, benchmark, end_time - start_time
 
+#batch
+(num1, bench1, time1) = one_layer_training_with_bias(10, 1, 0.01, 1000, 123123, 100, train_data, train_label, test_data, test_label, 0.01,"1 batch")
+(num2, bench2, time2) = one_layer_training_with_bias(10, 5, 0.01, 1000, 123123, 100, train_data, train_label, test_data, test_label, 0.01,"5 batch")
+(num3, bench3, time3) = one_layer_training_with_bias(10, 20, 0.01, 1000, 123123, 100, train_data, train_label, test_data, test_label, 0.01,"20 batch")
+(num4, bench4, time4) = one_layer_training_with_bias(10, 100, 0.01, 1000, 123123, 100, train_data, train_label, test_data, test_label, 0.01,"100 batch")
+(num5, bench5, time5) = one_layer_training_with_bias(10, 1000, 0.01, 1000, 123123, 100, train_data, train_label, test_data, test_label, 0.01,"1000 batch")
+np.savetxt("1batch.csv",bench1,delimiter=',')
+np.savetxt("5batch.csv",bench2,delimiter=',')
+np.savetxt("20batch.csv",bench3,delimiter=',')
+np.savetxt("100batch.csv",bench4,delimiter=',')
+np.savetxt("1000batch.csv",bench5,delimiter=',')
+print (time1 + " " +time2+ " " +time3+ " " +time4+ " " +time5)
 
 
 
@@ -432,7 +444,8 @@ def conv_sample_ffbias_training(conv_core,num_of_fmap,num_of_hidden_unit,
 #(num1, bench1, eval1, time1) = one_layer_training(5, 3, 0.01, 500, 123123, 200, train_data, train_label, test_data, test_label, 0.01,"no bias")
 ###hidden neuron
 # (num2, bench2, eval2, time2) = one_layer_training_with_bias(5, 3, 0.01, 500, 123123, 1000, train_data, train_label, test_data, test_label, 0.01,"1000 hid")
-# (num3, bench3, eval3, time3) = one_layer_training_with_bias(5, 3, 0.01, 500, 123123, 100, train_data, train_label, test_data, test_label, 0.01,"100 hid")
+#(num3, bench3, time3) = one_layer_training_with_bias(5, 3, 0.01, 500, 123123, 100, train_data, train_label, test_data, test_label, 0.01,"100 hid")
+#np.savetxt("100hid.csv",bench3,delimiter=',')
 # (num4, bench4, eval4, time4) = one_layer_training_with_bias(5, 3, 0.01, 500, 123123, 10, train_data, train_label, test_data, test_label, 0.01,"10 hid")
 # (num5, bench5, eval5, time5) = one_layer_training_with_bias(5, 3, 0.01, 500, 123123, 1, train_data, train_label, test_data, test_label, 0.01,"1 hid")
 # print(time2)
@@ -451,19 +464,19 @@ def conv_sample_ffbias_training(conv_core,num_of_fmap,num_of_hidden_unit,
 # (num4, bench4, time4) = one_layer_training_with_bias(100, 100, 0.01, 1000, 123123, 100, train_data, train_label, test_data, test_label, 0.01,"100 batch")
 # (num5, bench5, time5) = one_layer_training_with_bias(1000, 1000, 0.01, 1000, 123123, 100, train_data, train_label, test_data, test_label, 0.01,"1000 batch")
 
-(num5, bench5, time5) = conv_sample_ffbias_training(5,4,100,0.01,123123,3,3,28,0.01,train_data,train_label, test_data, test_label,"mao")
+#(num5, bench5, time5) = conv_sample_ffbias_training(5,4,100,0.01,123123,3,3,28,0.01,train_data,train_label, test_data, test_label,"mao")
 
 # print(time1)
 # print(time2)
 # print(time3)
 # print(time4)
 # print(time5)
-fig, ax = plt.subplots()
+#fig, ax = plt.subplots()
 # plt.plot(num1, bench1,'k', label="1")
 # plt.plot(num2, bench2,'b', label="5")
 # plt.plot(num3, bench3,'g', label="20")
 # plt.plot(num4, bench4,'y', label="100")
-plt.plot(num5, bench5,'r', label="1000")
+#plt.plot(num5, bench5,'r', label="1000")
 
 plt.show()
 
