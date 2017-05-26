@@ -7,7 +7,6 @@
     <list default="true" id="8c15b717-b861-4ad3-a683-063991c2a911" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/毕设 (Autosaved).docx" afterPath="$PROJECT_DIR$/毕设 (Autosaved).docx" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ffnn_1lr.py" afterPath="$PROJECT_DIR$/ffnn_1lr.py" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -154,8 +153,8 @@
     </option>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="191" />
-    <option name="y" value="122" />
+    <option name="x" value="224" />
+    <option name="y" value="58" />
     <option name="width" value="1264" />
     <option name="height" value="778" />
   </component>
@@ -420,7 +419,7 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="191" y="122" width="1264" height="778" extended-state="0" />
+    <frame x="224" y="58" width="1264" height="778" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.006436042" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
