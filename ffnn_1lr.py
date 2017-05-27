@@ -14,7 +14,7 @@ test_data = (pd.read_csv("~/Developer/kaggle.Digit_Recognizer/datasets/train.csv
              .iloc[32000:, 1:].values).astype('float32')
 test_label = (pd.read_csv("~/Developer/kaggle.Digit_Recognizer/datasets/train.csv")
               .iloc[32000:, 0].values).astype('int32')
-
+ori_train_label= train_label
 # one hot encode label
 num_of_labels = train_label.shape[0]
 encoded_labels = np.zeros((num_of_labels, 10),
@@ -80,33 +80,37 @@ def one_layer_training(epoch, batch_size, alpha, CE_freq, random_seed, num_of_hi
             d_in_to_hid = np.dot(train_batch.transpose(), d_hid)
 
             # update weights
-            del_hid_to_out = -1 * alpha * d_hid_to_out / batch_size
-            del_in_to_hid = -1 * alpha * d_in_to_hid / batch_size
+            del_hid_to_out = -1 * alpha * d_hid_to_out
+            del_in_to_hid = -1 * alpha * d_in_to_hid
             hid_to_out_weights += del_hid_to_out
             in_to_hid_weights += del_in_to_hid
 
             train_No += 1
             # evaluation
 
-            if train_No % (train_data.shape[0] / batch_size / CE_freq + 1) == 0:
+            if (train_No * batch_size) % (train_No * batch_size / 1000) == 0:
                 hid_state = np.dot(test_data, in_to_hid_weights)
+
                 out_state = np.dot(hid_state, hid_to_out_weights)
+
                 out_state = 1 / (1 + np.exp(-out_state))
                 prediction = np.argmax(out_state, axis=1)
                 evaluation = np.abs(prediction - test_label)
                 evaluation = np.bincount(evaluation)[0] / 10000
                 benchmark = np.append(benchmark, [evaluation])
-                # print(evalu)
-                # print(benchmark)
-                print(label+' - epoch: ' + str(i) + ' ' + str(train_No * batch_size / (train_data.shape[0] / 100)) + '% :: '
+
+                print(label + ' - epoch: ' + str(i) + ' ' + str(
+                    train_No * batch_size / (train_data.shape[0] / 100)) + '% :: '
                       + str(evaluation))
 
-    print('train complete')
-    benchmark = benchmark[1:]
-    Numbers = range(0, benchmark.shape[0])
-    end_time = time.time()
+        print('train complete')
+        benchmark = benchmark[1:]
+        Numbers = range(0, benchmark.shape[0])
+        # plt.plot(Numbers, benchmark)
+        # plt.show()
+        end_time = time.time()
 
-    return Numbers, benchmark, end_time - start_time
+        return Numbers, benchmark, end_time - start_time
 
 
 def one_layer_training_with_bias(epoch, batch_size, alpha, CE_freq, random_seed, num_of_hidden_unit, train_data,
@@ -141,6 +145,7 @@ def one_layer_training_with_bias(epoch, batch_size, alpha, CE_freq, random_seed,
     ###########train with bias###############
     start_time = time.time()
     benchmark = np.zeros(1)
+    benchmark1 = np.zeros(1)
     # mini batch fprop
     for i in range(0, epoch):
         train_No = 0
@@ -189,6 +194,18 @@ def one_layer_training_with_bias(epoch, batch_size, alpha, CE_freq, random_seed,
                 evaluation = np.abs(prediction - test_label)
                 evaluation = np.bincount(evaluation)[0] / 10000
                 benchmark = np.append(benchmark, [evaluation])
+
+                #
+                # hid_state = np.dot(train_data, in_to_hid_weights)
+                # hid_state = hid_state + hid_bias[0]
+                # out_state = np.dot(hid_state, hid_to_out_weights)
+                # out_state = out_state + out_bias[0]
+                # out_state = 1 / (1 + np.exp(-out_state))
+                # prediction1 = np.argmax(out_state, axis=1)
+                # evaluation1 = np.abs(prediction1 - ori_train_label[0:5000])
+                # evaluation1 = np.bincount(evaluation1)[0] / train_data.shape[0]
+                # benchmark1 = np.append(benchmark1, [evaluation1])
+                #
                 #print(evaluation)
                 # print(benchmark)
                 print(label+' - epoch: ' + str(i) + ' ' + str(train_No * batch_size / (train_data.shape[0] / 100)) + '% :: '
@@ -202,6 +219,7 @@ def one_layer_training_with_bias(epoch, batch_size, alpha, CE_freq, random_seed,
     end_time = time.time()
 
     return Numbers, benchmark, end_time - start_time
+
 
 
 def one_layer_training_with_bias_api(alpha, train_batch, train_label_batch, in_to_hid_weights, hid_bias,
@@ -223,8 +241,8 @@ def one_layer_training_with_bias_api(alpha, train_batch, train_label_batch, in_t
     d_in = np.dot(d_hid, in_to_hid_weights.transpose())
 
     # update weights
-    del_hid_to_out = -1 * alpha * d_hid_to_out / batch_size
-    del_in_to_hid = -1 * alpha * d_in_to_hid / batch_size
+    del_hid_to_out = -1 * alpha * d_hid_to_out
+    del_in_to_hid = -1 * alpha * d_in_to_hid
     hid_to_out_weights += del_hid_to_out
     in_to_hid_weights += del_in_to_hid
 
@@ -440,13 +458,68 @@ def conv_sample_ffbias_training(conv_core,num_of_fmap,num_of_hidden_unit,
 #131.53803420066833 97.59222078323364 26.850767135620117 20.91114616394043 11.101556062698364
 
 #epoch
-(num1, bench1, time1) = one_layer_training_with_bias(10, 200, 0.005, 1000, 123123, 100, train_data, train_label, test_data, test_label, 0.01,"200 batch")
-(num2, bench2, time2) = one_layer_training_with_bias(10, 10, 0.01, 1000, 123123, 100, train_data, train_label, test_data, test_label, 0.01,"10 batch")
-(num3, bench3, time3) = one_layer_training_with_bias(10, 1, 0.01, 1000, 123123, 100, train_data, train_label, test_data, test_label, 0.01,"1 batch")
+# (num1, bench1, time1) = one_layer_training_with_bias(10, 200, 0.005, 1000, 123123, 100, train_data, train_label, test_data, test_label, 0.01,"200 batch")
+# (num2, bench2, time2) = one_layer_training_with_bias(10, 10, 0.01, 1000, 123123, 100, train_data, train_label, test_data, test_label, 0.01,"10 batch")
+# (num3, bench3, time3) = one_layer_training_with_bias(10, 1, 0.01, 1000, 123123, 100, train_data, train_label, test_data, test_label, 0.01,"1 batch")
+#
+# np.savetxt("200batch10ep.csv",bench1,delimiter=',')
+# np.savetxt("10batch10ep.csv",bench2,delimiter=',')
+# np.savetxt("1batch10ep.csv",bench3,delimiter=',')
 
-np.savetxt("200batch10ep.csv",bench1,delimiter=',')
-np.savetxt("10batch10ep.csv",bench2,delimiter=',')
-np.savetxt("1batch10ep.csv",bench3,delimiter=',')
+#learning rate
+
+# (num1, bench1, time1) = one_layer_training_with_bias(5, 10, 0.001, 1000, 123123, 100, train_data, train_label, test_data, test_label, 0.01,"0.001 lrn rte")
+# (num2, bench2, time2) = one_layer_training_with_bias(5, 10, 0.01, 1000, 123123, 100, train_data, train_label, test_data, test_label, 0.01,"0.01 lrn rte")
+# (num3, bench3, time3) = one_layer_training_with_bias(5, 10, 0.1, 1000, 123123, 100, train_data, train_label, test_data, test_label, 0.01,"0.1 lrn rte")
+# (num4, bench4, time4) = one_layer_training_with_bias(5, 10, 0.5, 1000, 123123, 100, train_data, train_label, test_data, test_label, 0.01,"0.5 lrn rte")
+#
+# np.savetxt("rate0001.csv",bench1,delimiter=',')
+# np.savetxt("rate001.csv",bench2,delimiter=',')
+# np.savetxt("rate01.csv",bench3,delimiter=',')
+# np.savetxt("rate05.csv",bench4,delimiter=',')
+
+# #num of hidden layer neuron
+#
+# (num1, bench1, tbench1, time1) = one_layer_training_with_bias(5, 10, 0.01, 1000, 123123, 1, train_data[], train_label, test_data, test_label, 0.01,"nurn1")
+# (num2, bench2, tbench2, time2) = one_layer_training_with_bias(5, 10, 0.01, 1000, 123123, 10, train_data, train_label, test_data, test_label, 0.01,"nurn10")
+# (num3, bench3, tbench3, time3) = one_layer_training_with_bias(5, 10, 0.01, 1000, 123123, 200, train_data, train_label, test_data, test_label, 0.01,"nurn200")
+# (num4, bench4, tbench4, time4) = one_layer_training_with_bias(5, 10, 0.01, 1000, 123123, 2000, train_data, train_label, test_data, test_label, 0.01,"nurn2000")
+#
+# np.savetxt("nurntest1.csv",bench1,delimiter=',')
+# np.savetxt("nurntest10.csv",bench2,delimiter=',')
+# np.savetxt("nurntest200.csv",bench3,delimiter=',')
+# np.savetxt("nurntest2000.csv",bench4,delimiter=',')
+# np.savetxt("nurntrain1.csv",tbench1,delimiter=',')
+# np.savetxt("nurntrain10.csv",tbench2,delimiter=',')
+# np.savetxt("nurntrain200.csv",tbench3,delimiter=',')
+# np.savetxt("nurntrain2000.csv",tbench4,delimiter=',')
+# print (str(time1) + " " +str(time2)+ " " +str(time3)+ " " +str(time4))
+# #112.01469278335571 159.93236780166626 317.2059121131897 2166.0835299491882
+
+#num of hidden layer neuron2
+
+#(num1, bench1, tbench1, time1) = one_layer_training_with_bias(5, 10, 0.01, 1000, 123123, 1, train_data[0:5000], train_label[0:10000], test_data, test_label, 0.01,"nurn1")
+#(num2, bench2, tbench2, time2) = one_layer_training_with_bias(5, 10, 0.01, 1000, 123123, 10, train_data[0:5000], train_label[0:10000], test_data, test_label, 0.01,"nurn10")
+#(num3, bench3, tbench3, time3) = one_layer_training_with_bias(5, 10, 0.01, 1000, 123123, 200, train_data[0:5000], train_label[0:10000], test_data, test_label, 0.01,"nurn200")
+#(num4, bench4, tbench4, time4) = one_layer_training_with_bias(10, 10, 0.1, 1000, 123123, 10000, train_data[0:5000], train_label[0:10000], test_data, test_label, 0.01,"nurn2000")
+
+#np.savetxt("nurn1test1.csv",bench1,delimiter=',')
+#np.savetxt("nurn1test10.csv",bench2,delimiter=',')
+#np.savetxt("nurn1test200.csv",bench3,delimiter=',')
+#np.savetxt("nurn1test10000.csv",bench4,delimiter=',')
+#np.savetxt("nurn1train1.csv",tbench1,delimiter=',')
+#np.savetxt("nurn1train10.csv",tbench2,delimiter=',')
+#np.savetxt("nurn1train200.csv",tbench3,delimiter=',')
+#np.savetxt("nurn1train10000.csv",tbench4,delimiter=',')
+#print (str(time1) + " " +str(time2)+ " " +str(time3)+ " " +str(time4))
+#112.01469278335571 159.93236780166626 317.2059121131897 2166.0835299491882
+
+#cnn vs fnn
+(num2, bench2, time2) = conv_sample_ffbias_training(5,6,100,0.01,123123,10,3,28,0.01,train_data,train_label, test_data, test_label,"cnn")
+(num1, bench1, time1) = one_layer_training_with_bias(3, 10, 0.01, 1000, 123123, 100, train_data, train_label, test_data, test_label, 0.01,"fnn")
+np.savetxt("cnnfnnc.csv",bench1,delimiter=',')
+np.savetxt("cnnfnnf.csv",bench2,delimiter=',')
+
 
 
 
