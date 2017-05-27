@@ -31,7 +31,6 @@ test_data /= 255
 
 # one layer training
 
-
 def one_layer_training(epoch, batch_size, alpha, CE_freq, random_seed, num_of_hidden_unit, train_data, train_label,
                        test_data, test_label, weights_init,label):
     # weight init
@@ -111,7 +110,6 @@ def one_layer_training(epoch, batch_size, alpha, CE_freq, random_seed, num_of_hi
         end_time = time.time()
 
         return Numbers, benchmark, end_time - start_time
-
 
 def one_layer_training_with_bias(epoch, batch_size, alpha, CE_freq, random_seed, num_of_hidden_unit, train_data,
                                  train_label, test_data, test_label, weights_init,label):
@@ -220,8 +218,6 @@ def one_layer_training_with_bias(epoch, batch_size, alpha, CE_freq, random_seed,
 
     return Numbers, benchmark, end_time - start_time
 
-
-
 def one_layer_training_with_bias_api(alpha, train_batch, train_label_batch, in_to_hid_weights, hid_bias,
                                      hid_to_out_weights,out_bias,batch_size):
 # fprop
@@ -250,7 +246,6 @@ def one_layer_training_with_bias_api(alpha, train_batch, train_label_batch, in_t
     out_bias += -1 * alpha * d_Out
 
     return in_to_hid_weights,hid_bias,hid_to_out_weights,out_bias,d_in
-
 
 def conv_sample_ffbias_training(conv_core,num_of_fmap,num_of_hidden_unit,
                                 weights_init,random_seed,batch_size,epoch,image_size,alpha,train_data,
@@ -515,10 +510,17 @@ def conv_sample_ffbias_training(conv_core,num_of_fmap,num_of_hidden_unit,
 #112.01469278335571 159.93236780166626 317.2059121131897 2166.0835299491882
 
 #cnn vs fnn
-(num2, bench2, time2) = conv_sample_ffbias_training(5,6,100,0.01,123123,10,3,28,0.01,train_data,train_label, test_data, test_label,"cnn")
+#(num2, bench2, time2) = conv_sample_ffbias_training(5,6,100,0.01,123123,10,3,28,0.01,train_data,train_label, test_data, test_label,"cnn")
+# (num1, bench1, time1) = one_layer_training_with_bias(3, 10, 0.01, 1000, 123123, 100, train_data, train_label, test_data, test_label, 0.01,"fnn")
+# np.savetxt("cnnfnnc.csv",bench1,delimiter=',')
+#np.savetxt("cnnfnnf.csv",bench2,delimiter=',')
+
+#bias vs no bias
 (num1, bench1, time1) = one_layer_training_with_bias(3, 10, 0.01, 1000, 123123, 100, train_data, train_label, test_data, test_label, 0.01,"fnn")
-np.savetxt("cnnfnnc.csv",bench1,delimiter=',')
-np.savetxt("cnnfnnf.csv",bench2,delimiter=',')
+(num2, bench2, time2) = one_layer_training(3, 10, 0.01, 1000, 123123, 100, train_data, train_label, test_data, test_label, 0.01,"fnn")
+np.savetxt("bias.csv",bench1,delimiter=',')
+np.savetxt("biasno.csv",bench2,delimiter=',')
+
 
 
 

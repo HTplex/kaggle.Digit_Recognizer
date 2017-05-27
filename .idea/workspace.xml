@@ -83,16 +83,18 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="ffnn_1lr.py" pinned="false" current-in-tab="true">
+      <file leaf-file-name="ffnn_1lr.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/ffnn_1lr.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="121">
-              <caret line="92" column="0" lean-forward="true" selection-start-line="92" selection-start-column="0" selection-end-line="92" selection-end-column="0" />
+            <state relative-caret-position="241">
+              <caret line="521" column="45" lean-forward="true" selection-start-line="521" selection-start-column="45" selection-end-line="521" selection-end-column="45" />
               <folding>
                 <element signature="e#10#29#0" expanded="true" />
-                <element signature="e#10300#20084#0" expanded="false" />
-                <element signature="e#11931#19850#0" expanded="false" />
-                <marker date="1495871244000" expanded="true" signature="13261:13408" ph="..." />
+                <element signature="e#4502#8912#0" expanded="false" />
+                <element signature="e#9097#10036#0" expanded="false" />
+                <element signature="e#10295#20079#0" expanded="false" />
+                <element signature="e#11926#19845#0" expanded="false" />
+                <marker date="1495877503000" expanded="true" signature="13256:13403" ph="..." />
               </folding>
             </state>
           </provider>
@@ -101,7 +103,7 @@
       <file leaf-file-name="codeformat.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/codeformat.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-2474">
+            <state relative-caret-position="-3374">
               <caret line="8" column="0" lean-forward="false" selection-start-line="8" selection-start-column="0" selection-end-line="8" selection-end-column="126" />
               <folding>
                 <element signature="e#10#29#0" expanded="true" />
@@ -113,11 +115,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="benchmark.ipynb" pinned="false" current-in-tab="false">
+      <file leaf-file-name="benchmark.ipynb" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/benchmark.ipynb">
           <provider selected="true" editor-type-id="ipnb-editor">
             <state>
-              <selected id="5" />
+              <selected id="7" />
             </state>
           </provider>
         </entry>
@@ -157,8 +159,8 @@
         <option value="$PROJECT_DIR$/ffnn_1lr.ipynb" />
         <option value="$PROJECT_DIR$/csfnn.ipynb" />
         <option value="$PROJECT_DIR$/codeformat.py" />
-        <option value="$PROJECT_DIR$/benchmark.ipynb" />
         <option value="$PROJECT_DIR$/ffnn_1lr.py" />
+        <option value="$PROJECT_DIR$/benchmark.ipynb" />
       </list>
     </option>
   </component>
@@ -476,9 +478,11 @@
           <caret line="11" column="44" lean-forward="false" selection-start-line="11" selection-start-column="44" selection-end-line="11" selection-end-column="44" />
           <folding>
             <element signature="e#10#29#0" expanded="true" />
-            <element signature="e#10300#20084#0" expanded="false" />
-            <element signature="e#11931#19850#0" expanded="false" />
-            <marker date="1495871244000" expanded="true" signature="13261:13408" ph="..." />
+            <element signature="e#4502#8912#0" expanded="false" />
+            <element signature="e#9097#10036#0" expanded="false" />
+            <element signature="e#10295#20079#0" expanded="false" />
+            <element signature="e#11926#19845#0" expanded="false" />
+            <marker date="1495877503000" expanded="true" signature="13256:13403" ph="..." />
           </folding>
         </state>
       </provider>
@@ -536,9 +540,11 @@
           <caret line="11" column="44" lean-forward="false" selection-start-line="11" selection-start-column="44" selection-end-line="11" selection-end-column="44" />
           <folding>
             <element signature="e#10#29#0" expanded="true" />
-            <element signature="e#10300#20084#0" expanded="false" />
-            <element signature="e#11931#19850#0" expanded="false" />
-            <marker date="1495871244000" expanded="true" signature="13261:13408" ph="..." />
+            <element signature="e#4502#8912#0" expanded="false" />
+            <element signature="e#9097#10036#0" expanded="false" />
+            <element signature="e#10295#20079#0" expanded="false" />
+            <element signature="e#11926#19845#0" expanded="false" />
+            <marker date="1495877503000" expanded="true" signature="13256:13403" ph="..." />
           </folding>
         </state>
       </provider>
@@ -589,9 +595,11 @@
           <caret line="11" column="44" lean-forward="true" selection-start-line="11" selection-start-column="44" selection-end-line="11" selection-end-column="44" />
           <folding>
             <element signature="e#10#29#0" expanded="true" />
-            <element signature="e#10300#20084#0" expanded="false" />
-            <element signature="e#11931#19850#0" expanded="false" />
-            <marker date="1495871244000" expanded="true" signature="13261:13408" ph="..." />
+            <element signature="e#4502#8912#0" expanded="false" />
+            <element signature="e#9097#10036#0" expanded="false" />
+            <element signature="e#10295#20079#0" expanded="false" />
+            <element signature="e#11926#19845#0" expanded="false" />
+            <marker date="1495877503000" expanded="true" signature="13256:13403" ph="..." />
           </folding>
         </state>
       </provider>
@@ -642,9 +650,11 @@
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
             <element signature="e#10#29#0" expanded="true" />
-            <element signature="e#10300#20084#0" expanded="false" />
-            <element signature="e#11931#19850#0" expanded="false" />
-            <marker date="1495871244000" expanded="true" signature="13261:13408" ph="..." />
+            <element signature="e#4502#8912#0" expanded="false" />
+            <element signature="e#9097#10036#0" expanded="false" />
+            <element signature="e#10295#20079#0" expanded="false" />
+            <element signature="e#11926#19845#0" expanded="false" />
+            <marker date="1495877503000" expanded="true" signature="13256:13403" ph="..." />
           </folding>
         </state>
       </provider>
@@ -688,9 +698,11 @@
           <caret line="5" column="0" lean-forward="false" selection-start-line="5" selection-start-column="0" selection-end-line="5" selection-end-column="0" />
           <folding>
             <element signature="e#10#29#0" expanded="true" />
-            <element signature="e#10300#20084#0" expanded="false" />
-            <element signature="e#11931#19850#0" expanded="false" />
-            <marker date="1495871244000" expanded="true" signature="13261:13408" ph="..." />
+            <element signature="e#4502#8912#0" expanded="false" />
+            <element signature="e#9097#10036#0" expanded="false" />
+            <element signature="e#10295#20079#0" expanded="false" />
+            <element signature="e#11926#19845#0" expanded="false" />
+            <marker date="1495877503000" expanded="true" signature="13256:13403" ph="..." />
           </folding>
         </state>
       </provider>
@@ -812,16 +824,9 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/benchmark.ipynb">
-      <provider selected="true" editor-type-id="ipnb-editor">
-        <state>
-          <selected id="5" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/codeformat.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-2474">
+        <state relative-caret-position="-3374">
           <caret line="8" column="0" lean-forward="false" selection-start-line="8" selection-start-column="0" selection-end-line="8" selection-end-column="126" />
           <folding>
             <element signature="e#10#29#0" expanded="true" />
@@ -834,14 +839,23 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/ffnn_1lr.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="121">
-          <caret line="92" column="0" lean-forward="true" selection-start-line="92" selection-start-column="0" selection-end-line="92" selection-end-column="0" />
+        <state relative-caret-position="241">
+          <caret line="521" column="45" lean-forward="true" selection-start-line="521" selection-start-column="45" selection-end-line="521" selection-end-column="45" />
           <folding>
             <element signature="e#10#29#0" expanded="true" />
-            <element signature="e#10300#20084#0" expanded="false" />
-            <element signature="e#11931#19850#0" expanded="false" />
-            <marker date="1495871244000" expanded="true" signature="13261:13408" ph="..." />
+            <element signature="e#4502#8912#0" expanded="false" />
+            <element signature="e#9097#10036#0" expanded="false" />
+            <element signature="e#10295#20079#0" expanded="false" />
+            <element signature="e#11926#19845#0" expanded="false" />
+            <marker date="1495877503000" expanded="true" signature="13256:13403" ph="..." />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/benchmark.ipynb">
+      <provider selected="true" editor-type-id="ipnb-editor">
+        <state>
+          <selected id="7" />
         </state>
       </provider>
     </entry>
