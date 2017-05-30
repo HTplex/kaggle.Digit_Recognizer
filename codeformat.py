@@ -412,13 +412,13 @@ def conv_sample_ffbias_training(conv_core, num_of_fmap, num_of_hidden_unit,
                     train_No * batch_size / (train_data.shape[0] / 100)) + '% :: '
                       + str(evaluation))
     print('train complete')
-    benchmark = benchmark[1:]
-    Numbers = range(0, benchmark.shape[0])
+    #benchmark = benchmark[1:]
+    #Numbers = range(0, benchmark.shape[0])
     # plt.plot(Numbers, benchmark)
     # plt.show()
     end_time = time.time()
 
-    return Numbers, benchmark, end_time - start_time
+    return  conv_core,conved_input,two_d_input
 
 
 # (num1, bench1, eval1, time1) = one_layer_training(5, 3, 0.01, 500, 123123, 200, train_data, train_label, test_data, test_label, 0.01,"no bias")
@@ -443,8 +443,13 @@ def conv_sample_ffbias_training(conv_core, num_of_fmap, num_of_hidden_unit,
 # (num4, bench4, time4) = one_layer_training_with_bias(100, 100, 0.01, 1000, 123123, 100, train_data, train_label, test_data, test_label, 0.01,"100 batch")
 # (num5, bench5, time5) = one_layer_training_with_bias(1000, 1000, 0.01, 1000, 123123, 100, train_data, train_label, test_data, test_label, 0.01,"1000 batch")
 
-(num5, bench5, time5) = conv_sample_ffbias_training(5, 4, 100, 0.01, 123123, 3, 3, 28, 0.01, train_data, train_label,
+(c,cin,two) = conv_sample_ffbias_training(5, 4, 100, 0.01, 123123, 1, 1, 28, 0.01, train_data, train_label,
                                                     test_data, test_label, "mao")
+np.savetxt("figcore.csv",c,delimiter=',')
+np.savetxt("figcoved.csv",cin,delimiter=',')
+np.savetxt("figin.csv",two,delimiter=',')
+
+
 
 # print(time1)
 # print(time2)
