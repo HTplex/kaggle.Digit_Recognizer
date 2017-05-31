@@ -5,8 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="8c15b717-b861-4ad3-a683-063991c2a911" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/毕设2 尼玛再闪退卸word.docx" afterPath="$PROJECT_DIR$/毕设2 尼玛再闪退卸word.docx" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/benchmark.ipynb" afterPath="$PROJECT_DIR$/benchmark.ipynb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/排版版版.docx" afterPath="$PROJECT_DIR$/排版版版.docx" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ffnn_1lr.py" afterPath="$PROJECT_DIR$/ffnn_1lr.py" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -86,8 +85,8 @@
       <file leaf-file-name="ffnn_1lr.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/ffnn_1lr.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="198">
-              <caret line="717" column="45" lean-forward="true" selection-start-line="717" selection-start-column="45" selection-end-line="717" selection-end-column="45" />
+            <state relative-caret-position="68">
+              <caret line="695" column="53" lean-forward="true" selection-start-line="695" selection-start-column="53" selection-end-line="695" selection-end-column="53" />
               <folding>
                 <element signature="e#10#29#0" expanded="true" />
                 <element signature="e#1286#4293#0" expanded="false" />
@@ -96,7 +95,7 @@
                 <element signature="e#10295#20079#0" expanded="false" />
                 <element signature="e#11926#19845#0" expanded="false" />
                 <element signature="e#20342#30174#0" expanded="false" />
-                <marker date="1496235655000" expanded="true" signature="13256:13403" ph="..." />
+                <marker date="1496239829000" expanded="true" signature="13256:13403" ph="..." />
               </folding>
             </state>
           </provider>
@@ -167,7 +166,6 @@
     </option>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="-28" />
     <option name="y" value="17" />
     <option name="width" value="1440" />
     <option name="height" value="896" />
@@ -438,7 +436,7 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-28" y="17" width="1440" height="896" extended-state="1" />
+    <frame x="0" y="17" width="1440" height="896" extended-state="0" />
     <editor active="false" />
     <layout>
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.15785764" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
@@ -506,7 +504,7 @@
             <element signature="e#10295#20079#0" expanded="false" />
             <element signature="e#11926#19845#0" expanded="false" />
             <element signature="e#20342#30174#0" expanded="false" />
-            <marker date="1496235655000" expanded="true" signature="13256:13403" ph="..." />
+            <marker date="1496239829000" expanded="true" signature="13256:13403" ph="..." />
           </folding>
         </state>
       </provider>
@@ -570,7 +568,7 @@
             <element signature="e#10295#20079#0" expanded="false" />
             <element signature="e#11926#19845#0" expanded="false" />
             <element signature="e#20342#30174#0" expanded="false" />
-            <marker date="1496235655000" expanded="true" signature="13256:13403" ph="..." />
+            <marker date="1496239829000" expanded="true" signature="13256:13403" ph="..." />
           </folding>
         </state>
       </provider>
@@ -627,7 +625,7 @@
             <element signature="e#10295#20079#0" expanded="false" />
             <element signature="e#11926#19845#0" expanded="false" />
             <element signature="e#20342#30174#0" expanded="false" />
-            <marker date="1496235655000" expanded="true" signature="13256:13403" ph="..." />
+            <marker date="1496239829000" expanded="true" signature="13256:13403" ph="..." />
           </folding>
         </state>
       </provider>
@@ -684,7 +682,7 @@
             <element signature="e#10295#20079#0" expanded="false" />
             <element signature="e#11926#19845#0" expanded="false" />
             <element signature="e#20342#30174#0" expanded="false" />
-            <marker date="1496235655000" expanded="true" signature="13256:13403" ph="..." />
+            <marker date="1496239829000" expanded="true" signature="13256:13403" ph="..." />
           </folding>
         </state>
       </provider>
@@ -734,7 +732,7 @@
             <element signature="e#10295#20079#0" expanded="false" />
             <element signature="e#11926#19845#0" expanded="false" />
             <element signature="e#20342#30174#0" expanded="false" />
-            <marker date="1496235655000" expanded="true" signature="13256:13403" ph="..." />
+            <marker date="1496239829000" expanded="true" signature="13256:13403" ph="..." />
           </folding>
         </state>
       </provider>
@@ -878,8 +876,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/ffnn_1lr.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="198">
-          <caret line="717" column="45" lean-forward="true" selection-start-line="717" selection-start-column="45" selection-end-line="717" selection-end-column="45" />
+        <state relative-caret-position="68">
+          <caret line="695" column="53" lean-forward="true" selection-start-line="695" selection-start-column="53" selection-end-line="695" selection-end-column="53" />
           <folding>
             <element signature="e#10#29#0" expanded="true" />
             <element signature="e#1286#4293#0" expanded="false" />
@@ -888,7 +886,7 @@
             <element signature="e#10295#20079#0" expanded="false" />
             <element signature="e#11926#19845#0" expanded="false" />
             <element signature="e#20342#30174#0" expanded="false" />
-            <marker date="1496235655000" expanded="true" signature="13256:13403" ph="..." />
+            <marker date="1496239829000" expanded="true" signature="13256:13403" ph="..." />
           </folding>
         </state>
       </provider>
