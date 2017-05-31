@@ -437,6 +437,196 @@ def conv_sample_ffbias_training(conv_core,num_of_fmap,num_of_hidden_unit,
 
     return Numbers, benchmark, end_time - start_time
 
+def conv_sample_ffbias_training_vis(conv_core,num_of_fmap,num_of_hidden_unit,
+                                weights_init,random_seed,batch_size,epoch,image_size,alpha,train_data,
+                                 train_label, test_data, test_label,label):
+    rand.seed(a=random_seed)
+
+    in_to_conv_weights = np.zeros((num_of_fmap, conv_core * conv_core), dtype=np.float)
+    for i in range(0, in_to_conv_weights.shape[0]):
+        for j in range(0, in_to_conv_weights.shape[1]):
+            in_to_conv_weights[i][j] = weights_init * rand.random()
+    print(in_to_conv_weights.shape)
+    # [[map1No1*1, map1No1*2, ...map1No28*28]
+    # [map2No1*1, map2No1*2, ...map2No28*28]
+    # ...
+    # [map6No1*1, map6No1*2, ...map6No28*28]]
+
+    # after submapping
+
+    # [[map1No1*1, map1No1*2, ...map1No14*14]
+    # [map2No1*1, map2No1*2, ...map2No14*14]
+    # ...
+    # [map6No1*1, map6No1*2, ...map6No14*14]]
+
+    # to input: to one line: 6*14*14 para
+    hid_bias = np.ones((batch_size, num_of_hidden_unit), dtype=np.float)
+    hid_bias *= weights_init * rand.random()
+    out_bias = np.ones((batch_size, 10), dtype=np.float)
+    out_bias *= weights_init * rand.random()
+
+    in_to_hid_weights = np.zeros(
+        (int(num_of_fmap * ((28 - conv_core + 1) / 2) * ((28 - conv_core + 1) / 2)), num_of_hidden_unit),
+        dtype=np.float)
+    for i in range(0, in_to_hid_weights.shape[0]):
+        for j in range(0, in_to_hid_weights.shape[1]):
+            in_to_hid_weights[i][j] = weights_init * rand.random()
+    #print(in_to_hid_weights.shape)
+
+    hid_to_out_weights = np.zeros((num_of_hidden_unit, train_label.shape[1]), dtype=np.float)
+    for i in range(0, hid_to_out_weights.shape[0]):
+        for j in range(0, hid_to_out_weights.shape[1]):
+            hid_to_out_weights[i][j] = weights_init * rand.random()
+    #print(hid_to_out_weights.shape)
+
+
+    for ep in range(0, epoch):
+        train_No = 0
+        batch_index = 0
+        while batch_index + batch_size < train_data.shape[0]:
+            train_data_batch = train_data[batch_index:batch_index + batch_size, :]
+            train_label_batch = train_label[batch_index:batch_index + batch_size, :]
+            batch_index = batch_index + batch_size
+
+            ###fprop
+
+            two_d_input = train_data_batch.reshape(train_data_batch.shape[0], image_size, image_size)
+            # print(two_d_input.shape)
+            # print((two_d_input[0][0:5,0:5]))
+
+            conved_input = np.zeros(
+                (train_data_batch.shape[0], num_of_fmap, image_size - conv_core + 1, image_size - conv_core + 1),
+                dtype=np.float)
+            conved_input_maxloc = np.zeros(
+                (train_data_batch.shape[0], num_of_fmap, image_size - conv_core + 1, image_size - conv_core + 1),
+                dtype=np.float)
+            for i in range(0, train_data_batch.shape[0]):
+                for j in range(0, num_of_fmap):
+                    for k in range(0, image_size - conv_core + 1):
+                        for l in range(0, image_size - conv_core + 1):
+                            conved_input[i][j][k][l] = sum(
+                                sum(two_d_input[i][k:k + conv_core, l:l + conv_core] * (in_to_conv_weights[j].
+                                                                                        reshape(conv_core, conv_core))))
+
+                            ##l2(max)
+            # print(conved_input)
+            sampled_input = np.zeros((train_data_batch.shape[0], num_of_fmap, int((image_size - conv_core + 1) / 2),
+                                      int((image_size - conv_core + 1) / 2)), dtype=np.float)
+            for i in range(0, train_data_batch.shape[0]):
+                for j in range(0, num_of_fmap):
+                    for k in range(0, int(conved_input.shape[2] / 2)):
+                        for l in range(0, int(conved_input.shape[3] / 2)):
+                            sampled_input[i][j][k][l] = np.amax(conved_input[i][j][2 * k:2 * k + 2, 2 * l:2 * l + 2])
+                            agmx = np.argmax(conved_input[i][j][2 * k:2 * k + 2, 2 * l:2 * l + 2])
+                            conved_input_maxloc[i][j][2 * k + int(agmx / 2)][2 * l + agmx % 2] = 1
+            # print(np.amax(conved_input[0][0][2*0:2*0+2,2*0:2*0+2]))
+            # print(sampled_input[0][0])
+            # print(conved_input[0][0])
+            # print(conved_input_maxloc[0][0])
+            # print(sampled_input.shape)
+
+            oned_fnn_in = sampled_input.reshape(sampled_input.shape[0],
+                                                sampled_input.shape[1] * sampled_input.shape[2] * sampled_input.shape[
+                                                    3])
+            # print(oned_fnn_in.shape)
+            (in_to_hid_weights, hid_bias, hid_to_out_weights, out_bias, d_in) = one_layer_training_with_bias_api \
+                (alpha, oned_fnn_in, train_label_batch, in_to_hid_weights, hid_bias, hid_to_out_weights, out_bias,batch_size)
+            # print(d_in.shape)
+
+            ##bp conv
+            d_in = d_in.reshape(d_in.shape[0], num_of_fmap, int((28 - conv_core + 1) / 2),
+                                int((28 - conv_core + 1) / 2))
+            expd_d_in = np.zeros((d_in.shape[0], d_in.shape[1], d_in.shape[2] * 2, d_in.shape[3] * 2), dtype=np.float)
+            # print(d_in.shape)
+            kr = [[1, 1], [1, 1]]
+            for i in range(0, train_data_batch.shape[0]):
+                for j in range(0, num_of_fmap):
+                    expd_d_in[i][j] = np.kron(d_in[i][j], kr)
+            # print(expd_d_in[0][0])
+            expd_d_in = expd_d_in * conved_input_maxloc
+            # print(expd_d_in[0][5])
+            # print(train_data_batch)
+
+            d_cov_w = np.zeros((d_in.shape[1], conv_core, conv_core), dtype=np.float)
+            for i in range(0, train_data_batch.shape[0]):
+                for j in range(0, num_of_fmap):
+                    for k in range(0, conv_core):
+                        for l in range(0, conv_core):
+                            d_cov_w[j][k][l] += sum(sum(
+                                expd_d_in[i][j] * two_d_input[i][k:k + expd_d_in.shape[2], l:l + expd_d_in.shape[3]]))
+            # print(d_cov_w)
+            # print(in_to_conv_weights)
+            # print(in_to_conv_weights[5])
+            in_to_conv_weights += -alpha * (d_cov_w.reshape(d_cov_w.shape[0], d_cov_w.shape[1] * d_cov_w.shape[2]))
+
+            ###eval
+
+            train_No += 1
+            benchmark = 0
+            evaluation = 0
+            # evaluation
+
+            if (train_No * batch_size) % (train_No * batch_size / 1000) == 0:
+                test_data = test_data[:100]
+                test_label = test_label[:100]
+
+                two_d_input = test_data.reshape(test_data.shape[0], image_size, image_size)
+                # print(two_d_input.shape)
+                # print((two_d_input[0][0:5,0:5]))
+
+                conved_input = np.zeros(
+                    (test_data.shape[0], num_of_fmap, image_size - conv_core + 1, image_size - conv_core + 1),
+                    dtype=np.float)
+                conved_input_maxloc = np.zeros(
+                    (test_data.shape[0], num_of_fmap, image_size - conv_core + 1, image_size - conv_core + 1),
+                    dtype=np.float)
+                for i in range(0, test_data.shape[0]):
+                    for j in range(0, num_of_fmap):
+                        for k in range(0, image_size - conv_core + 1):
+                            for l in range(0, image_size - conv_core + 1):
+                                conved_input[i][j][k][l] = sum(sum(two_d_input[i][k:k + conv_core, l:l + conv_core]
+                                                                   * (in_to_conv_weights[j].reshape(conv_core,
+                                                                                                    conv_core))))
+
+                                ##l2(max)
+                # print(conved_input)
+                sampled_input = np.zeros((test_data.shape[0], num_of_fmap, int((image_size - conv_core + 1) / 2),
+                                          int((image_size - conv_core + 1) / 2)), dtype=np.float)
+                for i in range(0, test_data.shape[0]):
+                    for j in range(0, num_of_fmap):
+                        for k in range(0, int(conved_input.shape[2] / 2)):
+                            for l in range(0, int(conved_input.shape[3] / 2)):
+                                sampled_input[i][j][k][l] = np.amax(
+                                    conved_input[i][j][2 * k:2 * k + 2, 2 * l:2 * l + 2])
+                                agmx = np.argmax(conved_input[i][j][2 * k:2 * k + 2, 2 * l:2 * l + 2])
+                                conved_input_maxloc[i][j][2 * k + int(agmx / 2)][2 * l + agmx % 2] = 1
+                oned_fnn_in = sampled_input.reshape(sampled_input.shape[0],
+                                                    sampled_input.shape[1] * sampled_input.shape[2] *
+                                                    sampled_input.shape[3])
+
+                hid_state = np.dot(oned_fnn_in, in_to_hid_weights)
+                hid_state = hid_state + hid_bias[0]
+                out_state = np.dot(hid_state, hid_to_out_weights)
+                out_state = out_state + out_bias[0]
+                out_state = 1 / (1 + np.exp(-out_state))
+                prediction = np.argmax(out_state, axis=1)
+                evaluation = np.abs(prediction - test_label)
+                evaluation = np.bincount(evaluation)[0] / 100
+                benchmark = np.append(benchmark, [evaluation])
+                # print(evaluation)
+                # print(benchmark)
+                print(label+' - epoch: ' + str(ep) + ' ' + str(
+                    train_No * batch_size / (train_data.shape[0] / 100)) + '% :: '
+                      + str(evaluation))
+    print('train complete')
+    benchmark = benchmark[1:]
+    Numbers = range(0, benchmark.shape[0])
+    # plt.plot(Numbers, benchmark)
+    # plt.show()
+    end_time = time.time()
+
+
+    return Numbers, benchmark, end_time - start_time, in_to_conv_weights, two_d_input, conved_input
 #batch
 # (num1, bench1, time1) = one_layer_training_with_bias(5, 1, 0.01, 1000, 123123, 100, train_data, train_label, test_data, test_label, 0.01,"1 batch")
 # (num2, bench2, time2) = one_layer_training_with_bias(5, 5, 0.01, 1000, 123123, 100, train_data, train_label, test_data, test_label, 0.01,"5 batch")
@@ -516,13 +706,16 @@ def conv_sample_ffbias_training(conv_core,num_of_fmap,num_of_hidden_unit,
 #np.savetxt("cnnfnnf.csv",bench2,delimiter=',')
 
 #bias vs no bias
-(num1, bench1, time1) = one_layer_training_with_bias(3, 10, 0.01, 1000, 123123, 100, train_data, train_label, test_data, test_label, 0.01,"fnn")
-(num2, bench2, time2) = one_layer_training(3, 10, 0.01, 1000, 123123, 100, train_data, train_label, test_data, test_label, 0.01,"fnn")
-np.savetxt("bias.csv",bench1,delimiter=',')
-np.savetxt("biasno.csv",bench2,delimiter=',')
+# (num1, bench1, time1) = one_layer_training_with_bias(3, 10, 0.01, 1000, 123123, 100, train_data, train_label, test_data, test_label, 0.01,"fnn")
+# (num2, bench2, time2) = one_layer_training(3, 10, 0.01, 1000, 123123, 100, train_data, train_label, test_data, test_label, 0.01,"fnn")
+# np.savetxt("bias.csv",bench1,delimiter=',')
+# np.savetxt("biasno.csv",bench2,delimiter=',')
 
-
-
+#conv visual
+(num2, bench2, time2, core, img, conved) = conv_sample_ffbias_training_vis(5,6,100,0.01,123123,1,1,28,0.01,train_data,train_label, test_data, test_label,"cnn")
+np.savetxt("viscore.csv",core,delimiter=',')
+np.savetxt("visin.csv",img,delimiter=',')
+np.savetxt("visout.csv",conved,delimiter=',')
 
 
 
