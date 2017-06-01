@@ -712,7 +712,7 @@ def conv_sample_ffbias_training_vis(conv_core,num_of_fmap,num_of_hidden_unit,
 # np.savetxt("biasno.csv",bench2,delimiter=',')
 
 #conv visual
-(num2, bench2, time2, core, img, conved) = conv_sample_ffbias_training_vis(5,6,100,0.01,123123,2,1,28,0.01,train_data,train_label, test_data, test_label,"cnn")
+(num2, bench2, time2, core, img, conved) = conv_sample_ffbias_training_vis(5,6,100,0.01,123123,2,2,28,0.01,train_data,train_label, test_data, test_label,"cnn")
 np.savetxt("viscore.csv",core,delimiter=',')
 np.savetxt("visin.csv",img,delimiter=',')
 np.savetxt("visout.csv",conved,delimiter=',')
