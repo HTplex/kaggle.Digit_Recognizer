@@ -441,7 +441,7 @@ def conv_sample_ffbias_training_vis(conv_core,num_of_fmap,num_of_hidden_unit,
                                 weights_init,random_seed,batch_size,epoch,image_size,alpha,train_data,
                                  train_label, test_data, test_label,label):
     rand.seed(a=random_seed)
-
+    start_time = time.time()
     in_to_conv_weights = np.zeros((num_of_fmap, conv_core * conv_core), dtype=np.float)
     for i in range(0, in_to_conv_weights.shape[0]):
         for j in range(0, in_to_conv_weights.shape[1]):
@@ -479,7 +479,7 @@ def conv_sample_ffbias_training_vis(conv_core,num_of_fmap,num_of_hidden_unit,
             hid_to_out_weights[i][j] = weights_init * rand.random()
     #print(hid_to_out_weights.shape)
 
-
+    benchmark = 0
     for ep in range(0, epoch):
         train_No = 0
         batch_index = 0
@@ -562,7 +562,7 @@ def conv_sample_ffbias_training_vis(conv_core,num_of_fmap,num_of_hidden_unit,
             ###eval
 
             train_No += 1
-            benchmark = 0
+
             evaluation = 0
             # evaluation
 
@@ -712,7 +712,7 @@ def conv_sample_ffbias_training_vis(conv_core,num_of_fmap,num_of_hidden_unit,
 # np.savetxt("biasno.csv",bench2,delimiter=',')
 
 #conv visual
-(num2, bench2, time2, core, img, conved) = conv_sample_ffbias_training_vis(5,6,100,0.01,123123,2,2,28,0.01,train_data,train_label, test_data, test_label,"cnn")
+(num2, bench2, time2, core, img, conved) = conv_sample_ffbias_training_vis(5,6,100,0.01,123123,1,1,28,0.01,train_data,train_label, test_data, test_label,"cnn")
 np.savetxt("viscore.csv",core,delimiter=',')
 np.savetxt("visin.csv",img,delimiter=',')
 np.savetxt("visout.csv",conved,delimiter=',')

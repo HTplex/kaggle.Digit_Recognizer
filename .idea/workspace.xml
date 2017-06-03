@@ -5,8 +5,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="8c15b717-b861-4ad3-a683-063991c2a911" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/排版版版.docx" afterPath="$PROJECT_DIR$/排版版版.docx" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/recoii_props.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/毕设2 尼玛再闪退卸word.docx" afterPath="$PROJECT_DIR$/毕设2 尼玛再闪退卸word.docx" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ffnn_1lr.py" afterPath="$PROJECT_DIR$/ffnn_1lr.py" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -44,18 +45,6 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Lab.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Lab.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="135">
-              <caret line="11" column="29" lean-forward="false" selection-start-line="11" selection-start-column="29" selection-end-line="11" selection-end-column="29" />
-              <folding>
-                <element signature="e#0#19#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="Lab.ipynb" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Lab.ipynb">
           <provider selected="true" editor-type-id="ipnb-editor">
@@ -83,20 +72,40 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="ffnn_1lr.py" pinned="false" current-in-tab="true">
+      <file leaf-file-name="ffnn_1lr.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/ffnn_1lr.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="4470">
-              <caret line="714" column="98" lean-forward="false" selection-start-line="714" selection-start-column="98" selection-end-line="714" selection-end-column="98" />
+            <state relative-caret-position="710">
+              <caret line="248" column="0" lean-forward="true" selection-start-line="220" selection-start-column="0" selection-end-line="248" selection-end-column="0" />
               <folding>
                 <element signature="e#10#29#0" expanded="true" />
                 <element signature="e#1286#4293#0" expanded="false" />
                 <element signature="e#4502#8912#0" expanded="false" />
-                <element signature="e#9097#10036#0" expanded="false" />
                 <element signature="e#10295#20079#0" expanded="false" />
                 <element signature="e#11926#19845#0" expanded="false" />
-                <marker date="1496245485000" expanded="true" signature="13256:13403" ph="..." />
+                <element signature="e#20342#30194#0" expanded="false" />
+                <marker date="1496318306000" expanded="true" signature="13256:13403" ph="..." />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="recoii_props.py" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/recoii_props.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="495">
+              <caret line="33" column="0" lean-forward="true" selection-start-line="33" selection-start-column="0" selection-end-line="33" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="npyio.py" pinned="false" current-in-tab="false">
+        <entry file="file:///usr/local/lib/python3.6/site-packages/numpy/lib/npyio.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="15">
+              <caret line="1218" column="0" lean-forward="false" selection-start-line="1218" selection-start-column="0" selection-end-line="1218" selection-end-column="0" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -104,7 +113,7 @@
       <file leaf-file-name="codeformat.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/codeformat.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="461">
+            <state relative-caret-position="3915">
               <caret line="451" column="0" lean-forward="false" selection-start-line="451" selection-start-column="0" selection-end-line="451" selection-end-column="0" />
               <folding>
                 <element signature="e#10#29#0" expanded="true" />
@@ -130,8 +139,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Python Script" />
         <option value="Jupyter Notebook" />
+        <option value="Python Script" />
       </list>
     </option>
   </component>
@@ -162,14 +171,13 @@
         <option value="$PROJECT_DIR$/codeformat.py" />
         <option value="$PROJECT_DIR$/benchmark.ipynb" />
         <option value="$PROJECT_DIR$/ffnn_1lr.py" />
+        <option value="$PROJECT_DIR$/recoii_props.py" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="780" />
-    <option name="y" value="53" />
     <option name="width" value="1440" />
-    <option name="height" value="896" />
+    <option name="height" value="900" />
   </component>
   <component name="ProjectView">
     <navigator currentView="ProjectPane" proportions="" version="1">
@@ -187,7 +195,6 @@
     </navigator>
     <panes>
       <pane id="Scope" />
-      <pane id="Scratches" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -202,10 +209,12 @@
           </PATH>
         </subPane>
       </pane>
+      <pane id="Scratches" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="settings.editor.selected.configurable" value="configurable.group.build" />
+    <property name="FullScreen" value="true" />
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
@@ -437,26 +446,26 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="780" y="53" width="1440" height="896" extended-state="0" />
+    <frame x="0" y="0" width="1440" height="900" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.15785764" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.15574348" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.38930348" sideWeight="0.5024665" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.06506024" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.43283582" sideWeight="0.49753347" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.329602" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24939662" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25248757" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.2375622" sideWeight="0.49753347" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -485,14 +494,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/explore.ipynb">
-      <provider selected="true" editor-type-id="ipnb-editor">
-        <state>
-          <selected id="-1" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/fprop.py" />
     <entry file="file://$PROJECT_DIR$/ffnn_1lr.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="165">
@@ -501,10 +502,10 @@
             <element signature="e#10#29#0" expanded="true" />
             <element signature="e#1286#4293#0" expanded="false" />
             <element signature="e#4502#8912#0" expanded="false" />
-            <element signature="e#9097#10036#0" expanded="false" />
             <element signature="e#10295#20079#0" expanded="false" />
             <element signature="e#11926#19845#0" expanded="false" />
-            <marker date="1496245485000" expanded="true" signature="13256:13403" ph="..." />
+            <element signature="e#20342#30194#0" expanded="false" />
+            <marker date="1496318306000" expanded="true" signature="13256:13403" ph="..." />
           </folding>
         </state>
       </provider>
@@ -564,10 +565,10 @@
             <element signature="e#10#29#0" expanded="true" />
             <element signature="e#1286#4293#0" expanded="false" />
             <element signature="e#4502#8912#0" expanded="false" />
-            <element signature="e#9097#10036#0" expanded="false" />
             <element signature="e#10295#20079#0" expanded="false" />
             <element signature="e#11926#19845#0" expanded="false" />
-            <marker date="1496245485000" expanded="true" signature="13256:13403" ph="..." />
+            <element signature="e#20342#30194#0" expanded="false" />
+            <marker date="1496318306000" expanded="true" signature="13256:13403" ph="..." />
           </folding>
         </state>
       </provider>
@@ -620,10 +621,10 @@
             <element signature="e#10#29#0" expanded="true" />
             <element signature="e#1286#4293#0" expanded="false" />
             <element signature="e#4502#8912#0" expanded="false" />
-            <element signature="e#9097#10036#0" expanded="false" />
             <element signature="e#10295#20079#0" expanded="false" />
             <element signature="e#11926#19845#0" expanded="false" />
-            <marker date="1496245485000" expanded="true" signature="13256:13403" ph="..." />
+            <element signature="e#20342#30194#0" expanded="false" />
+            <marker date="1496318306000" expanded="true" signature="13256:13403" ph="..." />
           </folding>
         </state>
       </provider>
@@ -676,10 +677,10 @@
             <element signature="e#10#29#0" expanded="true" />
             <element signature="e#1286#4293#0" expanded="false" />
             <element signature="e#4502#8912#0" expanded="false" />
-            <element signature="e#9097#10036#0" expanded="false" />
             <element signature="e#10295#20079#0" expanded="false" />
             <element signature="e#11926#19845#0" expanded="false" />
-            <marker date="1496245485000" expanded="true" signature="13256:13403" ph="..." />
+            <element signature="e#20342#30194#0" expanded="false" />
+            <marker date="1496318306000" expanded="true" signature="13256:13403" ph="..." />
           </folding>
         </state>
       </provider>
@@ -725,10 +726,10 @@
             <element signature="e#10#29#0" expanded="true" />
             <element signature="e#1286#4293#0" expanded="false" />
             <element signature="e#4502#8912#0" expanded="false" />
-            <element signature="e#9097#10036#0" expanded="false" />
             <element signature="e#10295#20079#0" expanded="false" />
             <element signature="e#11926#19845#0" expanded="false" />
-            <marker date="1496245485000" expanded="true" signature="13256:13403" ph="..." />
+            <element signature="e#20342#30194#0" expanded="false" />
+            <marker date="1496318306000" expanded="true" signature="13256:13403" ph="..." />
           </folding>
         </state>
       </provider>
@@ -850,16 +851,9 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/benchmark.ipynb">
-      <provider selected="true" editor-type-id="ipnb-editor">
-        <state>
-          <selected id="8" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/codeformat.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="461">
+        <state relative-caret-position="3915">
           <caret line="451" column="0" lean-forward="false" selection-start-line="451" selection-start-column="0" selection-end-line="451" selection-end-column="0" />
           <folding>
             <element signature="e#10#29#0" expanded="true" />
@@ -870,19 +864,42 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/benchmark.ipynb">
+      <provider selected="true" editor-type-id="ipnb-editor">
+        <state>
+          <selected id="8" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file:///usr/local/lib/python3.6/site-packages/numpy/lib/npyio.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="15">
+          <caret line="1218" column="0" lean-forward="false" selection-start-line="1218" selection-start-column="0" selection-end-line="1218" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/ffnn_1lr.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="4470">
-          <caret line="714" column="98" lean-forward="false" selection-start-line="714" selection-start-column="98" selection-end-line="714" selection-end-column="98" />
+        <state relative-caret-position="710">
+          <caret line="248" column="0" lean-forward="true" selection-start-line="220" selection-start-column="0" selection-end-line="248" selection-end-column="0" />
           <folding>
             <element signature="e#10#29#0" expanded="true" />
             <element signature="e#1286#4293#0" expanded="false" />
             <element signature="e#4502#8912#0" expanded="false" />
-            <element signature="e#9097#10036#0" expanded="false" />
             <element signature="e#10295#20079#0" expanded="false" />
             <element signature="e#11926#19845#0" expanded="false" />
-            <marker date="1496245485000" expanded="true" signature="13256:13403" ph="..." />
+            <element signature="e#20342#30194#0" expanded="false" />
+            <marker date="1496318306000" expanded="true" signature="13256:13403" ph="..." />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/recoii_props.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="495">
+          <caret line="33" column="0" lean-forward="true" selection-start-line="33" selection-start-column="0" selection-end-line="33" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>
