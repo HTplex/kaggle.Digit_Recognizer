@@ -131,14 +131,14 @@ def bp_full_linear_bias_mmtm_adplrt2(momentum,lrn_max, lrn_min, last_del_in_to_h
     lrnrt_in_to_hid += plus
     lrnrt_in_to_hid *= minus
 
-    # maxx = lrnrt_in_to_hid-lrn_max
-    # max_one = maxx/np.abs(maxx)
-    # max_minus = max_one * 0.05/2 + 0.05/2
-    # lrnrt_in_to_hid-=max_minus
-    # minn = lrnrt_in_to_hid-lrn_min
-    # min_one = minn/np.abs(minn)
-    # min_plus = min_one * 0.05/2 + 0.95 + 0.05/2
-    # lrnrt_in_to_hid /= min_plus
+    maxx = lrnrt_in_to_hid-lrn_max
+    max_one = maxx/np.abs(maxx)
+    max_minus = max_one * 0.05/2 + 0.05/2
+    lrnrt_in_to_hid-=max_minus
+    minn = lrnrt_in_to_hid-lrn_min
+    min_one = minn/np.abs(minn)
+    min_plus = min_one * 0.05/2 + 0.95 + 0.05/2
+    lrnrt_in_to_hid /= min_plus
     #
     multi = (last_d_hid_to_out+np.exp(-30)) * (d_hid_to_out+np.exp(-30))
     flag = multi / np.abs(multi)
@@ -147,14 +147,14 @@ def bp_full_linear_bias_mmtm_adplrt2(momentum,lrn_max, lrn_min, last_del_in_to_h
     lrnrt_hid_to_out += plus
     lrnrt_hid_to_out *= minus
 
-    # maxx = lrnrt_hid_to_out - lrn_max
-    # max_one = maxx / np.abs(maxx)
-    # max_minus = max_one * 0.05 / 2 + 0.05 / 2
-    # lrnrt_hid_to_out -= max_minus
-    # minn = lrnrt_hid_to_out - lrn_min
-    # min_one = minn / np.abs(minn)
-    # min_plus = min_one * 0.05 / 2 + 0.95 + 0.05 / 2
-    # lrnrt_hid_to_out /= min_plus
+    maxx = lrnrt_hid_to_out - lrn_max
+    max_one = maxx / np.abs(maxx)
+    max_minus = max_one * 0.05 / 2 + 0.05 / 2
+    lrnrt_hid_to_out -= max_minus
+    minn = lrnrt_hid_to_out - lrn_min
+    min_one = minn / np.abs(minn)
+    min_plus = min_one * 0.05 / 2 + 0.95 + 0.05 / 2
+    lrnrt_hid_to_out /= min_plus
     #
     multi = (last_d_hid+np.exp(-30)) * (d_hid+np.exp(-30))
     flag = multi / np.abs(multi)
@@ -163,14 +163,14 @@ def bp_full_linear_bias_mmtm_adplrt2(momentum,lrn_max, lrn_min, last_del_in_to_h
     lrnrt_hid_bias += plus
     lrnrt_hid_bias *= minus
 
-    # maxx = lrnrt_hid_bias - lrn_max
-    # max_one = maxx / np.abs(maxx)
-    # max_minus = max_one * 0.05 / 2 + 0.05 / 2
-    # lrnrt_hid_bias -= max_minus
-    # minn = lrnrt_hid_bias - lrn_min
-    # min_one = minn / np.abs(minn)
-    # min_plus = min_one * 0.05 / 2 + 0.95 + 0.05 / 2
-    # lrnrt_hid_bias /= min_plus
+    maxx = lrnrt_hid_bias - lrn_max
+    max_one = maxx / np.abs(maxx)
+    max_minus = max_one * 0.05 / 2 + 0.05 / 2
+    lrnrt_hid_bias -= max_minus
+    minn = lrnrt_hid_bias - lrn_min
+    min_one = minn / np.abs(minn)
+    min_plus = min_one * 0.05 / 2 + 0.95 + 0.05 / 2
+    lrnrt_hid_bias /= min_plus
     #
     multi = (last_d_out+np.exp(-30)) * (d_out+np.exp(-30))
     flag = multi / np.abs(multi)
@@ -179,14 +179,14 @@ def bp_full_linear_bias_mmtm_adplrt2(momentum,lrn_max, lrn_min, last_del_in_to_h
     lrnrt_out_bias += plus
     lrnrt_out_bias *= minus
 
-    # maxx = lrnrt_out_bias - lrn_max
-    # max_one = maxx / np.abs(maxx)
-    # max_minus = max_one * 0.05 / 2 + 0.05 / 2
-    # lrnrt_out_bias -= max_minus
-    # minn = lrnrt_out_bias - lrn_min
-    # min_one = minn / np.abs(minn)
-    # min_plus = min_one * 0.05 / 2 + 0.95 + 0.05 / 2
-    # lrnrt_out_bias /= min_plus
+    maxx = lrnrt_out_bias - lrn_max
+    max_one = maxx / np.abs(maxx)
+    max_minus = max_one * 0.05 / 2 + 0.05 / 2
+    lrnrt_out_bias -= max_minus
+    minn = lrnrt_out_bias - lrn_min
+    min_one = minn / np.abs(minn)
+    min_plus = min_one * 0.05 / 2 + 0.95 + 0.05 / 2
+    lrnrt_out_bias /= min_plus
 
 
     # for i in range(0,lrnrt_in_to_hid.shape[0]):

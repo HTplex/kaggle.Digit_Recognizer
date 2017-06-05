@@ -5,12 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="8c15b717-b861-4ad3-a683-063991c2a911" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lab2.ipynb" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/recoii_nets.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/save_imgs.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Lab.ipynb" afterPath="$PROJECT_DIR$/Lab.ipynb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ffnn_1lr.py" afterPath="$PROJECT_DIR$/ffnn_1lr.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/recoii_nets.py" afterPath="$PROJECT_DIR$/recoii_nets.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/recoii_props.py" afterPath="$PROJECT_DIR$/recoii_props.py" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -95,14 +90,14 @@
       <file leaf-file-name="recoii_props.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/recoii_props.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="165">
-              <caret line="126" column="13" lean-forward="false" selection-start-line="126" selection-start-column="13" selection-end-line="126" selection-end-column="13" />
+            <state relative-caret-position="935">
+              <caret line="193" column="15" lean-forward="true" selection-start-line="193" selection-start-column="15" selection-end-line="196" selection-end-column="41" />
               <folding>
                 <element signature="e#0#18#0" expanded="true" />
                 <element signature="e#556#1128#0" expanded="false" />
                 <element signature="e#1418#2427#0" expanded="false" />
                 <element signature="e#2950#5821#0" expanded="false" />
-                <element signature="e#11551#12669#0" expanded="false" />
+                <element signature="e#11487#12605#0" expanded="false" />
               </folding>
             </state>
           </provider>
@@ -123,13 +118,14 @@
       <file leaf-file-name="recoii_nets.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/recoii_nets.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="515">
-              <caret line="331" column="0" lean-forward="true" selection-start-line="331" selection-start-column="0" selection-end-line="331" selection-end-column="0" />
+            <state relative-caret-position="230">
+              <caret line="346" column="12" lean-forward="false" selection-start-line="346" selection-start-column="12" selection-end-line="346" selection-end-column="12" />
               <folding>
                 <element signature="e#0#25#0" expanded="true" />
                 <element signature="e#296#3402#0" expanded="false" />
                 <element signature="e#3588#7236#0" expanded="false" />
                 <element signature="e#7422#11534#0" expanded="false" />
+                <element signature="e#11747#16876#0" expanded="false" />
               </folding>
             </state>
           </provider>
@@ -506,7 +502,7 @@
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.38930348" sideWeight="0.5024665" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.06506024" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.329602" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.23734939" sideWeight="0.49753347" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.23734939" sideWeight="0.49753347" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24876674" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25248757" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
@@ -916,20 +912,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/recoii_props.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="165">
-          <caret line="126" column="13" lean-forward="false" selection-start-line="126" selection-start-column="13" selection-end-line="126" selection-end-column="13" />
-          <folding>
-            <element signature="e#0#18#0" expanded="true" />
-            <element signature="e#556#1128#0" expanded="false" />
-            <element signature="e#1418#2427#0" expanded="false" />
-            <element signature="e#2950#5821#0" expanded="false" />
-            <element signature="e#11551#12669#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/save_imgs.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="390">
@@ -940,15 +922,30 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/recoii_props.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="935">
+          <caret line="193" column="15" lean-forward="true" selection-start-line="193" selection-start-column="15" selection-end-line="196" selection-end-column="41" />
+          <folding>
+            <element signature="e#0#18#0" expanded="true" />
+            <element signature="e#556#1128#0" expanded="false" />
+            <element signature="e#1418#2427#0" expanded="false" />
+            <element signature="e#2950#5821#0" expanded="false" />
+            <element signature="e#11487#12605#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/recoii_nets.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="515">
-          <caret line="331" column="0" lean-forward="true" selection-start-line="331" selection-start-column="0" selection-end-line="331" selection-end-column="0" />
+        <state relative-caret-position="230">
+          <caret line="346" column="12" lean-forward="false" selection-start-line="346" selection-start-column="12" selection-end-line="346" selection-end-column="12" />
           <folding>
             <element signature="e#0#25#0" expanded="true" />
             <element signature="e#296#3402#0" expanded="false" />
             <element signature="e#3588#7236#0" expanded="false" />
             <element signature="e#7422#11534#0" expanded="false" />
+            <element signature="e#11747#16876#0" expanded="false" />
           </folding>
         </state>
       </provider>
