@@ -14,7 +14,7 @@ test_data = (pd.read_csv("~/Developer/kaggle.Digit_Recognizer/datasets/train.csv
              .iloc[32000:, 1:].values).astype('float32')
 test_label = (pd.read_csv("~/Developer/kaggle.Digit_Recognizer/datasets/train.csv")
               .iloc[32000:, 0].values).astype('int32')
-ori_train_label= train_label
+ori_train_label = train_label
 # one hot encode label
 num_of_labels = train_label.shape[0]
 encoded_labels = np.zeros((num_of_labels, 10),
